@@ -1,0 +1,241 @@
+.Carousel-Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(238, 245, 245);
+    padding-bottom: 30px;
+}
+.CarouselH1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; 
+    font-size: 2.7rem;
+    padding: 70px 55px;
+}
+.CarouselImg{
+    width: 800px;
+    height: auto;
+}
+.CarForm{
+    background-color: white;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 80px;
+    border-radius: 100px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15),
+              0 4px 6px rgba(0, 0, 0, 0.05);
+    
+}
+.CarFormSub{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.CarouselFormData{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.CarouselFormData input {
+    border: none;
+}
+.CarouselFormData select {
+    border: none;
+}
+.CarouselFormData label {
+    padding-bottom: 10px;
+}
+.SearchBtn{
+    height: 50px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px !important;
+}
+.search-icon{
+    font-size: 15px;
+    margin-right: 8px;
+    
+}
+
+/* tab view */
+@media (max-width: 768px) {
+     .CarouselH1{
+        font-size: 2.5rem;
+        padding-top: 20px;
+    }
+    .CarForm{
+        border-radius: 10px;
+        padding: 30px 15%;
+    }
+    .CarFormSub{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    }
+    .CarouselImg{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mob View */
+@media (max-width: 576px) {
+    .CarouselH1{
+        font-size: 2.2rem;
+        padding-top: 20px;
+    }
+    .CarForm{
+        border-radius: 10px;
+        padding: 30px 15%;
+    }
+    .CarFormSub{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.CarouselImg{
+    width: 100%;
+    height: auto;
+}
+
+}
+
+/* Explore Vehicles.................................. */
+.ExploreH2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; 
+    font-size: 2.5rem;
+    padding: 60px 55px 0px 55px;
+}
+.ExploreH6{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: 900;  */
+    font-size: 1rem;
+    color: darkgrey;
+    padding-bottom: 60px;
+}
+.Card{
+    /* height: 450px !important; */
+    min-height: 420px;
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+}
+.CarsCards{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+/* .CardImage{
+    height: 300px;
+    width:auto;
+} */
+ .CardSub{
+    padding-bottom: 8px !important;
+ }
+ .ExpBtnWrapper{
+    
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .ExpBtn{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid rgba(234, 228, 228, 0.861);
+ }
+ .ExpBtn:hover{
+    background-color: aliceblue;
+ }
+
+
+ /* Luxury Car................................................. */
+ .Luxury{
+    
+    padding: 20px;
+    color: white;
+    background-image: linear-gradient(to right, rgb(5, 121, 254),rgb(103, 161, 247), rgb(207, 234, 240));
+    margin-bottom: 40px;
+    border-radius: 15px;
+    
+ }
+ .LuxuryRent{
+    height: 300px;
+    width: auto;
+ }
+ .LuxPara{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    justify-content: center;
+    padding-left: 50px !important;
+    
+ }
+.ListCar{
+    background-color: white;
+    color: rgb(5, 121, 254);
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+/* Customers Card ..........................................*/
+.CustCard{
+    padding: 10px;
+    min-height: 200px !important;
+}
+.CustTittle{
+    /* display: flex ;
+    flex-direction: row; */
+}
+.CustImg{
+    height: 60px;
+    width: auto;
+    padding-right: 15px;
+}
+.CustLoc{
+    color: rgb(94, 122, 131);
+}
+
+/* Email Subscribe......................................... */
+
+.emailSubs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+
+}
+.email{
+    width: 30%;
+    height: 50px;
+    border: solid 2px #ccc;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+    border-right: none;
+    outline: none;
+
+    padding-left: 10px;
+}
+.button{
+    height: 50px;
+    background-color: rgb(7, 118, 254);
+    width: 200px;
+    border: solid 2px  rgb(7, 118, 254);
+    border-left: none;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.button:hover{
+    background-color: rgb(29, 118, 226);
+}
