@@ -1,0 +1,39 @@
+.LogoFlex{
+    display: flex;
+    align-items: center;
+
+}
+span{
+    color: #0d6efd;
+}
+
+p{
+    margin: 0px;
+}
+Nav.Link{
+    margin: 0px !important;
+    font-size: 2px;
+}
+
+.FootFlex{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.CompDesc{
+    width: 350px;
+}
+.FootHead{
+    color: black !important;
+    /* font-weight: 500; */
+    font: bold;
+}
+.FootLink{
+    margin: 0px;
+}
+
+.icon{
+    font-size: 32px;
+    padding-right: 13px;
+}

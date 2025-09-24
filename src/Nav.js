@@ -17,7 +17,10 @@ function NavBar() {
           <Nav.Link as={Link} to="/MyBookings">My Bookings</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link as={Link} to="/list">List</Nav.Link>
+          <Nav.Link as={Link} to="/DashBoard">DashBoard</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link as={Link} to="/Car-Details">CarDetails</Nav.Link>
         </Nav.Item>
       </Nav>
     </>

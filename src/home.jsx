@@ -1,6 +1,12 @@
 import './home.css'
 import CarCarousel from './Images/sedan.png'
 
+import { useEffect } from 'react';
+
+import { motion } from "motion/react"
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Ertiga from './Images/RentalCars/Ertiga.png'
 import Swift from './Images/RentalCars/SwiftDzire.png'
 import HondaCity from './Images/RentalCars/HondaCity.png'
@@ -14,6 +20,8 @@ import Cust1 from './Images/Customers/Cust1.png'
 import Cust2 from './Images/Customers/cust2.png'
 import Cust3 from './Images/Customers/cust3.png'
 
+import Footer from './Footer';
+
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FaSearch } from 'react-icons/fa';
@@ -23,11 +31,22 @@ import { faCarSide, faGasPump, faPeopleGroup , faTruckLoading } from "@fortaweso
 
 
 function Carousel(){
+
+useEffect(() => {
+    AOS.init({
+      duration: 800,   // animation duration (in ms)
+      easing: "ease-in-out", 
+      once: true,      // whether animation should happen only once
+      mirror: false    // whether elements animate out while scrolling past
+    });
+  }, []);
+
+
    return(
     <div className='Carousel-Container'>
-      <h1 className='CarouselH1'>Luxury Cars on Rent</h1>
+      <h1 className='CarouselH1' data-aos="fade-up">Luxury Cars on Rent</h1>
 
-      <form className='CarForm'>
+      <form className='CarForm' data-aos="fade-up" data-aos-delay="200">
         <div className='CarFormSub'>
         <div className='CarouselFormData'>
           <label htmlFor="location">Pickup Location</label>
@@ -51,12 +70,21 @@ function Carousel(){
         </div>
       </form>
 
-      <img className='CarouselImg' src={CarCarousel} alt="Car_Carousel-img" />
+      <img className='CarouselImg'  data-aos="fade-up" data-aos-delay="400" src={CarCarousel} alt="Car_Carousel-img" />
     </div>
    )
 }
 
 function ExploreVehicles(){
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,   // animation duration (in ms)
+      easing: "ease-in-out", 
+      once: true,      // whether animation should happen only once
+      mirror: false    // whether elements animate out while scrolling past
+    });
+  }, []);
 
     const RentCars = [
       {
@@ -141,12 +169,12 @@ function ExploreVehicles(){
 
   return(
     <>
-      <h2 className='ExploreH2'>Explore Vehicles</h2>
-      <h6 className='ExploreH6'>Where luxury meets the road – explore CarHive’s premium vehicles tailored for your next trip.</h6>
+      <h2  className='ExploreH2' data-aos="fade-up" data-aos-delay="00">Explore Vehicles</h2>
+      <h6 className='ExploreH6' data-aos="fade-up" data-aos-delay="00">Where luxury meets the road – explore CarHive’s premium vehicles tailored for your next trip.</h6>
       
       {/* <div className="CarsCards"> */}
       <Container>
-      <Row >
+      <Row data-aos="fade-up" data-aos-delay="200">
       {RentCars.map((carhive)=>(
         <Col key={carhive.id} xs={12} md={6} lg={4} className="mb-4">
         <Card className='Card'>
@@ -155,7 +183,7 @@ function ExploreVehicles(){
             <Card.Title>{carhive.Car}</Card.Title>
              <Card.Subtitle className='cardSub'>{carhive.Model}</Card.Subtitle>
               
-              <Row>
+              <Row >
                 <Col xs={6} className='mb-6'>
                   <Card.Text><FontAwesomeIcon icon={faPeopleGroup} style={{ marginRight: "6px" }} />{carhive.Seats}</Card.Text>
                   <Card.Text><FontAwesomeIcon icon={faCarSide} style={{ marginRight: "6px" }} />{carhive.Gear}</Card.Text>
@@ -194,7 +222,7 @@ function LuxuryCar(){
                 Earn passive income effortlessly by listing your premium car with us.  
                 We handle insurance, driver checks, and payments — you just enjoy the earnings.
             </p>
-            <div className='ListCar'>List you car</div>
+            <div className='ListCar'>List your cars</div>
           </Col>
           <Col>
             <img className='LuxuryRent' src={CarRent} alt="" />
@@ -279,12 +307,17 @@ function Customers(){
 function Subscribe(){
   return(
     <>
-        <h2 className='ExploreH2'>Never Miss a Deal</h2>
-        <h6 className='ExploreH6'>Subscribe to get the latest offers, new arrivals, and exclusive discounts</h6>
-      <div className='emailSubs'>
-        <input className='email' type="email" placeholder='Your Mail-id to Subscribe'/>
-        <button className='button'>Subscribe</button>
+      <div className="subscribe">
+
+          <h2 className='ExploreH2'>Never Miss a Deal</h2>
+          <h6 className='ExploreH6'>Subscribe to get the latest offers, new arrivals, and exclusive discounts</h6>
+        <div className='emailSubs'>
+          <input className='email' type="email" placeholder='Your Mail-id to Subscribe'/>
+          <button className='button'>Subscribe</button>
+        </div>
+
       </div>
+        
     </>
   )
 }
@@ -298,6 +331,7 @@ function Home() {
       <LuxuryCar/>
       <Customers/>
       <Subscribe/>
+      <Footer/>
     </>
   );
 }
