@@ -29,6 +29,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faCarSide, faGasPump, faPeopleGroup , faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 
+import { useNavigate } from 'react-router-dom';
+
 
 function Carousel(){
 
@@ -96,7 +98,8 @@ function ExploreVehicles(){
         Fuel: "Diesel" ,
         Gear: "Manual",
         Status: "Available",
-        Capacity: "378 L"
+        Capacity: "378 L",
+        Price: "1500"
       },
       {
         id: 2,
@@ -107,7 +110,8 @@ function ExploreVehicles(){
         Fuel: "Diesel" ,
         Gear: "Manual",
         Status: "Available",
-        Capacity: "209 L"
+        Capacity: "209 L",
+        Price: "1500"
       },
       {
         id: 3,
@@ -118,7 +122,8 @@ function ExploreVehicles(){
         Fuel: "Hybrid" ,
         Gear: "Automatic",
         Status: "Available",
-        Capacity: "521 L"
+        Capacity: "521 L",
+        Price: "1500"
       },
       {
         id: 4,
@@ -129,7 +134,8 @@ function ExploreVehicles(){
         Fuel: "Petrol" ,
         Gear: "Automatic",
         Status: "Available",
-        Capacity: "506 L"
+        Capacity: "506 L",
+        Price: "1500"
       },
       {
         id: 5,
@@ -140,7 +146,8 @@ function ExploreVehicles(){
         Fuel: "Diesel" ,
         Gear: "Manual",
         Status: "Available",
-        Capacity: "190 L"
+        Capacity: "190 L",
+        Price: "1500"
       },
       {
         id: 6,
@@ -151,7 +158,8 @@ function ExploreVehicles(){
         Fuel: "Diesel" ,
         Gear: "Manual",
         Status: "Available",
-        Capacity: "359 L"
+        Capacity: "359 L",
+        Price: "1500"
       },
       {
         id: 7,
@@ -162,9 +170,16 @@ function ExploreVehicles(){
         Fuel: "Diesel" ,
         Gear: "Manual",
         Status: "Available",
-        Capacity: "300 L"
+        Capacity: "300 L",
+        Price: "1500"
       }
     ]
+
+    const navigate = useNavigate();
+
+    const HandleCardClick = (CarID) =>{
+      navigate(`/Car-Details/${CarID}`);
+    }
 
 
   return(
@@ -177,7 +192,9 @@ function ExploreVehicles(){
       <Row data-aos="fade-up" data-aos-delay="200">
       {RentCars.map((carhive)=>(
         <Col key={carhive.id} xs={12} md={6} lg={4} className="mb-4">
-        <Card className='Card'>
+        <Card className='Card' onClick={()=>{
+          HandleCardClick(carhive.id)
+        }}>
           <Card.Img className='CardImage' variant="top" src={carhive.image} />
           <Card.Body>
             <Card.Title>{carhive.Car}</Card.Title>

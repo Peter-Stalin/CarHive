@@ -7,6 +7,10 @@ import MyBookings from './MyBookings';
 import DashBoard from './DashBoard';
 import CarDetail from './Car-Details';
 
+import DashAddCars from './DashAddCars';
+import DashBookings from './DashBookings';
+import DashManageCars from './DashManageCars';
+
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
@@ -20,7 +24,11 @@ function App() {
         <Route path="/cars" element={<Cars />} />
         <Route path="/MyBookings" element={<MyBookings />} />
         <Route path="/DashBoard" element={<DashBoard />} />
-        <Route path="/Car-Details" element={<CarDetail />} />
+         <Route path="/Car-Details/:carID" element={<CarDetail />} />
+
+         <Route path="/DashAddCars" element={<DashAddCars />} />
+          <Route path="/DashManageCars" element={<DashManageCars />} />
+          <Route path="/DashBookings" element={<DashBookings />} />
 
       </Routes>
     </Router>

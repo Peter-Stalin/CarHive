@@ -1,7 +1,16 @@
+.Footer{
+    margin-top: 150px;
+}
+
 .LogoFlex{
     display: flex;
     align-items: center;
 
+}
+
+.LogoImg{
+    width: 75px;
+    padding-right: 10px;
 }
 span{
     color: #0d6efd;
@@ -12,7 +21,24 @@ p{
 }
 Nav.Link{
     margin: 0px !important;
-    font-size: 2px;
+    font-size: 1px;
+}
+
+.FootFlex .nav-link {
+  padding: 2px 0;     /* reduce padding */
+  line-height: 1.5;   /* tighten spacing */
+  font-size: 14px;
+  color: grey;
+}
+
+.FootPara {
+  padding: 2px 0;     /* reduce padding */
+  line-height: 1.5;   /* tighten spacing */
+  font-size: 14px;
+  color: grey;
+
+  margin: 0px !important;
+  font-size: 14px;
 }
 
 .FootFlex{
@@ -22,15 +48,22 @@ Nav.Link{
 }
 
 .CompDesc{
-    width: 350px;
+    width: 300px;
+    font-size: 14px;
 }
 .FootHead{
     color: black !important;
     /* font-weight: 500; */
     font: bold;
+    padding-bottom: 0px;
 }
 .FootLink{
     margin: 0px;
+}
+
+.PipeSymb{
+    display: inline-flex;
+    align-items: center;
 }
 
 .icon{

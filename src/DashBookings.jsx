@@ -1,4 +1,3 @@
-// src/pages/Contact.js
 import React, {useState} from "react";
 
 import { Row, Col, Container} from "react-bootstrap";
@@ -11,34 +10,32 @@ import { NavLink } from 'react-router-dom';
 import DefProfImg from './Images/DefaultProfile-removebg-preview.png';
 import { FaCamera } from "react-icons/fa";
 
-import './DashBoard.css'
-// import { img } from "motion/react-client";
+import './DashManageCars.css'
 
+function DashBooking(){
 
-function DashBoard() {
-
-  const [Image , SetImage] = useState(null);
-
-  const UploadProfile = (e) => {
-    const ProfileImg = e.target.files[0];
-
-    if(ProfileImg && ProfileImg.type.startsWith("image/")){
-        const reader = new FileReader();
-
-        reader.onload = () => {
-          SetImage(reader.result) // saves base 64 data to Store
+    const [Image , SetImage] = useState(null);
+    
+      const UploadProfile = (e) => {
+        const ProfileImg = e.target.files[0];
+    
+        if(ProfileImg && ProfileImg.type.startsWith("image/")){
+            const reader = new FileReader();
+    
+            reader.onload = () => {
+              SetImage(reader.result) // saves base 64 data to Store
+            }
+            reader.readAsDataURL(ProfileImg);
         }
-        reader.readAsDataURL(ProfileImg);
-    }
-    else{
-      SetImage(null)
-    }
-      
-
-  }
-
-  return(
-    <>
+        else{
+          SetImage(null)
+        }
+          
+    
+      }
+    
+    return(
+         <>
       <Container fluid>
 
         <Row>
@@ -92,18 +89,17 @@ function DashBoard() {
           </Col>
 
           <Col>
-              <h1>DashBoard</h1>
+              <h1>DashBookings</h1>
           </Col>
         </Row>
 
       </Container>
       
     </>
-  )
+
+
+        
+    )
 }
 
-export default DashBoard;
-
-
-
-
+export default DashBooking

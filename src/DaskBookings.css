@@ -1,0 +1,74 @@
+.DashNav{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 35px;
+    border-right: 1px solid darkgray;
+    
+}
+
+.DashMenu a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0px;
+}
+.DashMenu p {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.InputProfile{
+    display: none;
+} 
+
+  /* Profile Image................................................ */
+.ParentProfImg{
+  display: flex;
+  justify-content: center;
+}
+.ProfileImage{
+  position: relative;
+  display: inline-block;
+  
+}
+.ProfileImage img{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 35px;
+}
+.ProfileImage img:hover{
+
+   background-color: rgba(0, 0, 0,0.1);
+}
+.UploadOverlay{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-size: 12px;
+}
+.ProfileImage:hover .UploadOverlay{
+  opacity: 0.5;
+}
+
+/* DashMenu............................... */
+.LinkMenu{
+  margin-top: 25px;
+}
+ul{
+  list-style: none;
+}
+.DashMenu a{
+  text-decoration: none;
+  color: gray;
+  transition: background-color 0.8s ease; /* Smooth transition */
+}
+.DashMenu a.active{
+  background-color: lightblue;
+}

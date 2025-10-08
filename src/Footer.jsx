@@ -1,6 +1,6 @@
 import React from "react";
 
-import Logo from './Images/CarHive Logo.png'
+import Logo from './Images/CarHive Logo2.png'
 import './footer.css'
 
 import {Container, Nav, NavBar} from "react-bootstrap";
@@ -15,13 +15,13 @@ import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa";
 function Footer(){
     return(
         <>
-                <Container>
+                <Container className="Footer">
                 {/* First Row - 4 Columns */}
                 <Row>
                     {/* column 1................................. */}
                     <Col md={6}>
                         <div className="LogoFlex">
-                            <img src={Logo} alt="Logo" style={{ width: "80px" }} />
+                            <img className="LogoImg" src={Logo} alt="Logo"  />
                             <h2>Car<span>Hive</span></h2>
                         </div>
                         <p className="CompDesc">Premium car rental service with a wide selection of luxury and everyday vehicles for all your driving needs.</p>
@@ -78,13 +78,13 @@ function Footer(){
                      {/* column 4................................. */}
                     <Col md={2}>
                         <h6 className="FootHead">CONTACT</h6>
-                        <p>1/89, Sri Abirami Nagar</p>
-                        <p>Chinnamapalayam, Pollachi</p>
-                        <p>+91 70107 26912</p>
-                        <p>carhive2025@gmail.com</p>
+                        <p className="FootPara">1/89, Sri Abirami Nagar</p>
+                        <p className="FootPara">Chinnamapalayam, Pollachi</p>
+                        <p className="FootPara">+91 70107 26912</p>
+                        <p className="FootPara">carhive2025@gmail.com</p>
                     </Col>
                 </Row>
-
+   
                 <hr />
 
                 {/* Second Row - 2 Columns .................................................*/}
@@ -98,13 +98,13 @@ function Footer(){
                             <Nav.Link as={Link} to="/">Privacy</Nav.Link>
                             </Nav.Item>
                             
-                                <span className="mx-2">|</span> 
+                                <span className=" PipeSymb">|</span> 
 
                             <Nav.Item>
                             <Nav.Link as={Link} to="/">Terms</Nav.Link>
                             </Nav.Item>
 
-                                 <span className="mx-2">|</span> 
+                                 <span className="PipeSymb">|</span> 
 
                             <Nav.Item>
                             <Nav.Link as={Link} to="/">Cookies</Nav.Link>

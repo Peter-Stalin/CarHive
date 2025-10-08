@@ -1,6 +1,6 @@
 
 import './cars.css'
-import { FiSearch, FiFilter } from 'react-icons/fi'; // Feather Icons
+import { FaSearch , FaFilter} from "react-icons/fa";
 
 import Footer from './Footer';
 
@@ -11,7 +11,13 @@ function Carousel2(){
         <div className='carousel'>
           <h1>Available Cars</h1>
           <h6>Browse our selection of premium vehicles available for your next adventure</h6>
-          <input className='Carnpm startsInput' type="text" placeholder= 'Search by Make, Model or Feature'/>
+          
+          <div className="CarInputWrap">
+            <FaSearch className="SearchIcon" />
+            <input className='CarInput' type="text" placeholder='Search'/>
+            <FaFilter className="FilterIcon" />
+          </div>
+
         </div>
       </>
   )

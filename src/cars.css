@@ -21,11 +21,21 @@ h6{
     color: rgb(143, 143, 143) !important;
     padding-bottom: 20px;
 }
-.CarsInput{
-    width: 550px;
+
+.CarInputWrap{
+    background-color: white;
+    border-radius: 30px;
+}
+.CarInput{
+    outline: none;
     border: none;
-    outline: none; 
-    padding: 10px 20px ;
-     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15),
-              0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    padding: 15px ;
+    width: 500px;
+}
+.SearchIcon{
+    margin-left: 20px;
+}
+.FilterIcon{
+    margin-right: 20px;
 }
