@@ -16,15 +16,18 @@ function Footer(){
     return(
         <>
                 <Container className="Footer">
+                <div className="FooterLeft">
                 {/* First Row - 4 Columns */}
                 <Row>
                     {/* column 1................................. */}
                     <Col md={6}>
+                    
                         <div className="LogoFlex">
                             <img className="LogoImg" src={Logo} alt="Logo"  />
                             <h2>Car<span>Hive</span></h2>
                         </div>
                         <p className="CompDesc">Premium car rental service with a wide selection of luxury and everyday vehicles for all your driving needs.</p>
+                   
 
                          <div className="contact-icons">
                             <FaFacebook className="icon facebook" />
@@ -35,7 +38,9 @@ function Footer(){
                     </Col>
 
                      {/* column 2................................. */}
-                    <Col md={2}>
+                    
+                    <Col md={2} >
+                        
                         <h6 className="FootHead">QUICK LINKS</h6>
                         <Nav className="justify-content-end FootFlex" activeKey="/home">
                             <Nav.Item>
@@ -52,10 +57,11 @@ function Footer(){
                             </Nav.Item>
                             
                         </Nav>
-        
                     </Col>
+                    
 
                      {/* column 3................................. */}
+                    {/* <div className="FootLinkWrap"> */}
                     <Col md={2}>
                         <h6 className="FootHead">RESOURCES</h6>
                         <Nav className="justify-content-end FootFlex" activeKey="/home">
@@ -74,8 +80,11 @@ function Footer(){
                             
                         </Nav>
                     </Col>
+                    {/* </div> */}
+                    
 
                      {/* column 4................................. */}
+                    {/* <div className="FootLinkWrap"> */}
                     <Col md={2}>
                         <h6 className="FootHead">CONTACT</h6>
                         <p className="FootPara">1/89, Sri Abirami Nagar</p>
@@ -83,16 +92,18 @@ function Footer(){
                         <p className="FootPara">+91 70107 26912</p>
                         <p className="FootPara">carhive2025@gmail.com</p>
                     </Col>
+                    {/* </div> */}
                 </Row>
-   
+                </div>
                 <hr />
 
                 {/* Second Row - 2 Columns .................................................*/}
+                <div className="CopyRightsTC">
                 <Row className="mt-3">
-                    <Col><p>&copy; 2025 CarHive. All rights reserved.</p></Col>
+                    <Col  md={6} sm={12}><p>&copy; 2025 CarHive. All rights reserved.</p></Col>
 
 
-                    <Col>
+                    <Col  md={6} sm={12}>
                         <Nav className="justify-content-end" activeKey="/home">
                             <Nav.Item>
                             <Nav.Link as={Link} to="/">Privacy</Nav.Link>
@@ -114,6 +125,7 @@ function Footer(){
                         </Nav>
                     </Col>
                 </Row>
+                </div>
                 </Container>
         </>
     )

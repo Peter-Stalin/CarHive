@@ -131,10 +131,11 @@
     flex-direction: row;
     gap: 1rem;
 }
-/* .CardImage{
+.CardImage{
     height: 300px;
     width:auto;
-} */
+    object-fit: cover;
+}
  .CardSub{
     padding-bottom: 8px !important;
  }

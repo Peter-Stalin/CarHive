@@ -9,8 +9,9 @@
 }
 
 .LogoImg{
-    width: 75px;
+    width: 60px;
     padding-right: 10px;
+    
 }
 span{
     color: #0d6efd;
@@ -18,6 +19,7 @@ span{
 
 p{
     margin: 0px;
+    color: gray;
 }
 Nav.Link{
     margin: 0px !important;
@@ -69,4 +71,33 @@ Nav.Link{
 .icon{
     font-size: 32px;
     padding-right: 13px;
+    color: gray;
+}
+@media (max-width:986px){
+
+    .FooterLeft{
+        padding-left: 20px !important;
+
+    }
+    .LogoFlex{
+    padding-bottom: 10px;
+
+    }
+    .contact-icons{
+        padding-bottom: 30px;
+        padding-top: 10px;
+    }
+
+    .FootLinkWrap{
+        Padding-top: 25px;
+    }
+
+    .CopyRightsTC{
+       display: flex;
+       text-align: center;
+       justify-content: center;
+    }
+    .CopyRightsTC .nav {
+    justify-content: center !important;
+  }
 }

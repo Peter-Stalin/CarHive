@@ -54,9 +54,9 @@ useEffect(() => {
           <label htmlFor="location">Pickup Location</label>
             <select name="location" id="location">
               <option value="Pollachi">Pollachi</option>
-              <option value="Pollachi">Chennai</option>
-              <option value="Pollachi">Coimbatore</option>
-              <option value="Pollachi">Thuthukudi</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Coimbatore">Coimbatore</option>
+              <option value="Thuthukudi">Thuthukudi</option>
             </select>
         </div>
         <div className='CarouselFormData'>

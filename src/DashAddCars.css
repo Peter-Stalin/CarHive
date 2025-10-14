@@ -72,3 +72,78 @@ ul{
 .DashMenu a.active{
   background-color: lightblue;
 }
+
+/* Add Cars Content...................................... */
+.AddCarsMarPad{
+  padding: 40px 20px;
+}
+.AddCarsContentPara{
+  width: 600px;
+  color: gray;
+}
+
+
+/* Form............. */
+.AddCarForm{
+  width: 600px;
+}
+.AddCarFormFlex{
+  display: flex;
+  flex-direction: column;
+}
+.AddCarFormFlex input, .AddCarFormFlex select{
+  height: 40px;
+  border-radius: 5px;
+}
+.Design input, .Design select{
+  width: 170px;
+}
+.AddCarFormFlex label{
+  padding-top: 15px;
+  padding-bottom: 4px;
+}
+
+.btn-ListCar{
+  margin-top: 40px;
+}
+
+/* @media (max-width:768px) {
+
+  .DashNav {
+    width: 10%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid darkgray;
+  }
+
+  .AddCarsMarPad h2{
+    width: 50%; 
+  }
+  .AddCarsContentPara{
+    width: 90%;
+  }
+
+  .Design input, .Design select, .AddCarFormFlex input, .AddCarFormFlex select, .AddCarFormFlex textarea{
+    width: 65%;
+  }
+} */
+@media (max-width:768px) {
+  .DashNav {
+    width: 100%; /* Change from 10% to 100% */
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid darkgray;
+  }
+
+  .AddCarForm {
+    width: 100%; /* Add this */
+  }
+  
+  .AddCarsContentPara {
+    width: 100%; /* Add this */
+  }
+
+   .Design input, .Design select, .AddCarFormFlex input, .AddCarFormFlex select, .AddCarFormFlex textarea{
+    width: 100%;
+   }
+}

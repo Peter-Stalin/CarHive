@@ -39,7 +39,7 @@ function DashAddCars(){
       <Container fluid>
 
         <Row>
-          <Col className="DashNav" lg={2} md={2}>
+          <Col className="DashNav" lg={2} md={3} xs={2}>
 
               <input type="file" className="InputProfile" id="FileInput" onChange={UploadProfile} />
               <label htmlFor="FileInput" className="ProfImgLabel">
@@ -88,8 +88,114 @@ function DashAddCars(){
             </div>
           </Col>
 
-          <Col>
-              <h1>DashAddCars</h1>
+          <Col lg={10} md={9} xs={10}>
+              <div className="AddCarsMarPad">
+                  <h2 >Add New Cars</h2>
+                  <p className="AddCarsContentPara">Fill in details to list a new car for booking, including pricing, availability, and car specifications.</p>
+                  <form action="" className="AddCarForm">
+
+                  <Container>
+                    <Row>
+                        <Col xs={12} sm={12}>
+                        <div className="AddCarFormFlex">
+                          <label htmlFor="">Brand</label>
+                          <input type="text" placeholder="eg., Toyota, Honda, Kia..."/>
+                        </div>
+                        </Col>
+                        <Col xs={12} sm={12}>
+                        <div className="AddCarFormFlex">
+                          <label htmlFor="">Model</label>
+                          <input type="text" placeholder="eg., XUV-700, VDI, X5..."/>
+                        </div>
+                        </Col>
+                    </Row>
+
+                    
+                    <div>
+                      <Row>
+                        <Col xs={12} sm={12} md={4}>
+                        <div className="AddCarFormFlex Design">
+                          <label htmlFor="">Year</label>
+                          <input type="number" />
+                        </div>
+                        </Col>
+
+                        <Col xs={12} sm={12} md={4}>
+                        <div className="AddCarFormFlex Design">
+                          <label htmlFor="">Price(₹)</label>
+                          <input type="number"  min="700" />
+                        </div>
+                        </Col>
+
+                        <Col xs={12} sm={12} md={4}>
+                        <div className="AddCarFormFlex Design">
+                          <label htmlFor="Category">Category</label>
+                          <select name="Category" id="Category">
+                            <option value="SelectCategory">Select a Category</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Van">Van</option>
+                          </select>
+                        </div>
+                        </Col>
+                      </Row>
+                     
+                      <Row>
+                        <Col xs={12} sm={12} md={4}>
+                        <div className="AddCarFormFlex Design">
+                          <label htmlFor="Transmision">Transmission</label>
+                          <select name="Transmission" id="Transmission">
+                            <option value="SelectTransmission">Select a Transmission</option>
+                            <option value="Manual">Manual</option>
+                            <option value="Automatic">Automatic</option>
+                            <option value="SemiAutomatic">Semi-Automatic</option>
+                          </select>
+                        </div> 
+                        </Col>
+
+                        <Col xs={12} sm={12} md={4}>
+                        <div className="AddCarFormFlex Design">
+                            <label htmlFor="">Fuel Type</label>
+                              <select name="Category" id="Category">
+                                <option value="SelectCategory">Select a Category</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="Van">Van</option>
+                              </select>
+                        </div>
+                        </Col>
+                      
+                        <Col xs={12} sm={12} md={4}>
+                        <div className="AddCarFormFlex Design">
+                          <label htmlFor="">Seating Capacity</label>
+                          <input type="number"  min="3" max="25"/>
+                        </div>
+                        </Col>
+                      </Row>
+                    </div>
+
+                    <div className="AddCarFormFlex">
+                      <label htmlFor="Location">Location</label>
+                      <select name="Location" id="Location">
+                          <option value="SelectLocation">Select a Location</option>
+                          <option value="Chennai">Chennai</option>
+                          <option value="Coimbatore">Coimbatore</option>
+                          <option value="Thuthukudi">ThuThukudi</option>
+                          <option value="Pollachi">Pollachi</option>
+                        </select>
+                    </div>
+
+                    <div className="AddCarFormFlex">
+                       <label htmlFor="Description">Description</label>
+                       <textarea name="Descrition" id="Description" placeholder="Type Your Car Descrition" rows='4' maxLength='200'></textarea>
+                    </div>  
+
+                    <button className="btn btn-primary btn-ListCar">List Your Car</button>                   
+                  </Container>
+                  </form>
+
+              </div>
+              
           </Col>
         </Row>
 

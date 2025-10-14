@@ -2,8 +2,9 @@ import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-// import Form from 'react-bootstrap/Form';
+import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 // import InputGroup from 'react-bootstrap/InputGroup';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
@@ -26,7 +27,7 @@ function NavBar() {
             <img 
               alt="Logo Image"
               src={LogoImg}
-              width="55"
+              width="50"
               height="70"
               className=" "
             />{' '}
@@ -46,7 +47,7 @@ function NavBar() {
             </div>
             <Nav.Link className='LinkTab' as={Link} to="/DashBoard">Dashboard</Nav.Link>
             
-            <Button type="submit" className='SubBtn'>Logout</Button>
+            <Button type="submit" className='SubBtn'>Login</Button>
           </Nav>
 
          </Navbar.Collapse>

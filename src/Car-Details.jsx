@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useContext} from "react";
 import Footer from './Footer';
 import './Car-Details.css'
+import { CarContext } from "./Context/CarContext";
 
 import Ertiga from './Images/RentalCars/Ertiga.png'
 import Swift from './Images/RentalCars/SwiftDzire.png'
@@ -17,6 +18,7 @@ import { faCarSide, faGasPump, faPeopleGroup, faTruckLoading  } from "@fortaweso
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 
 function CarBooking(){
@@ -148,6 +150,33 @@ function CarBooking(){
     ]
 
     const SelectedCar = RentCars.find((car) => car.id === parseInt(carID) )
+
+    const [PickupDate, SetPickupDate] = useState("");
+    const [ReturnDate, SetReturnDate] = useState("");
+    const [Location, SetLocation] = useState("");
+
+
+    
+    // CarContext.....................
+
+    const {BookingCar, SetBookingCar} = useContext(CarContext);
+    const HandleBooking = (e) => {
+      e.preventDefault();
+
+      if(!PickupDate || !ReturnDate || !Location ){
+        alert("Please Fill All Details (PickupDate, ReturnDate, Location)");
+        return;
+      }
+
+      const BookingDetails = {
+        ...SelectedCar, PickupDate, ReturnDate, Location
+      };
+
+      SetBookingCar(BookingDetails);
+      navigate("/mybookings"); 
+    }
+
+
     if(!SelectedCar){
       return(
         <>
@@ -155,6 +184,7 @@ function CarBooking(){
         </>
       )
     }
+
     return(
         <>
             <Container className="SpaceForFooter">
@@ -225,15 +255,25 @@ function CarBooking(){
 
                     <hr className="LineBreak"/>
                       <div className="BookFormFlex">
-                         <label htmlFor="">Pickup Date</label>
-                         <input className="DateInput" type="Date" />
+                         <label htmlFor="PickupDate">Pickup Date</label>
+                         <input className="DateInput" type="Date" value={PickupDate} onChange={(e) => SetPickupDate(e.target.value)}/>
                       </div>
                       <div className="BookFormFlex">
-                         <label htmlFor="">Return Date</label>
-                         <input className="DateInput" type="Date" />
+                         <label htmlFor="ReturnDate">Return Date</label>
+                         <input className="DateInput" type="Date" value={ReturnDate} onChange={(e) => SetReturnDate(e.target.value)}/>
+                      </div>
+                      <div className="BookFormFlex">
+                         <label htmlFor="Location">Location</label>
+                          <select className="DateInput" name="Location" id="Location" value={Location} onChange={(e) => SetLocation(e.target.value)}>
+                            <option value="Location">Choose a Location</option>
+                            <option value="Pollachi">Pollachi</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Coimbatore">Coimbatore</option>
+                            <option value="Thuthukudi">Thuthukudi</option>
+                          </select>
                       </div>
                       <div className="BookBtn">
-                        <button className="btn btn-primary ">Book Now</button>
+                        <button className="btn btn-primary " onClick={HandleBooking}>Book Now</button>
                         <p className="CarBookPara">No Credit Card Required to Reserve</p>
                       </div>
                     

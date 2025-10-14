@@ -1,0 +1,16 @@
+.MyBookingCard{
+   width: 95%;
+}
+.MyBookingImage{
+    width: 200px;
+}
+.BookingCardDiv{
+    display: flex;
+    flex-direction: row;    
+}
+
+
+.BookingCardCol2{
+    display: flex;
+    justify-content: end;
+}

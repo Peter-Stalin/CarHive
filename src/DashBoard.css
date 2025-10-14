@@ -1,8 +1,6 @@
-Container{
-  
-}
+
 .DashNav{
-    width: 250px;
+    width: 250px !important;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -75,8 +73,100 @@ ul{
 .DashMenu a{
   text-decoration: none;
   color: gray;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 1s ease; /* Smooth transition */
 }
 .DashMenu a.active{
   background-color: lightblue;
 }
+
+@media (max-width:992px) {
+  .DashNav{
+    width: 50px !important;
+  }
+
+  .DashMenu p{
+    display: none;
+  }
+
+  .ProfileImage img{
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: cover;
+  border-radius: 50%;
+ }
+ .DashMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .DashIcon{
+  font-size: 22px !important;
+ }
+}
+
+
+
+/* Inside Contents Designing........................... */
+.DashMarPad{
+  padding: 40px 20px;
+}
+.DashContentPara{
+  width: 600px;
+  color: gray;
+}
+
+/* Dash Cards...... */
+.FirstRowCards{
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.DashCards{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 170px;
+  padding: 8px 12px;
+}
+.DashCardContent{
+  display: flex !important;
+  flex-direction: column !important;
+  /* padding: 8px 0px; */
+  /* padding-left: 10px; */
+  /* justify-content: center; */
+  gap: 5px;
+  
+}
+.DashCardContent p{
+  color: gray !important;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0px;
+  
+}
+.DashCardContent h5{
+  font-weight: 700;
+}
+
+.DashCardIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.NavIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(227, 242, 252);
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: rgb(31, 132, 172);
+}
+
+

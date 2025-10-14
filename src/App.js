@@ -11,12 +11,14 @@ import DashAddCars from './DashAddCars';
 import DashBookings from './DashBookings';
 import DashManageCars from './DashManageCars';
 
+import { CarProvider } from "./Context/CarContext";
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
     <div >
+      <CarProvider>
     <Router>
       <NavBar />
       <Routes>
@@ -32,6 +34,7 @@ function App() {
 
       </Routes>
     </Router>
+    </CarProvider>  {/* </CarDetailProvider>  */}
     </div>
   );
 }

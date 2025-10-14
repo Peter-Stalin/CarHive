@@ -19,10 +19,12 @@
     display: flex;
     align-items: center;
     color: black !important;
-    font: 900;
+    font-size: 30px;
+    font-weight: 900;
 }
 img{
     vertical-align: middle;
+    margin-right: 10px;
 }
 .LinkTab{
     margin-left: 6px;
@@ -102,4 +104,15 @@ img{
     margin-left: 15px !important;
     width: 100px;
     
+}
+
+@media (max-width:968px){
+    .SearchBoxWrap{
+        display: none;
+    }
+    .SubBtn{
+        margin-top: 10px;
+        margin-left:4px !important;
+        padding-left: 0px;
+    }
 }
